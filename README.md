@@ -1,3 +1,4 @@
+if you want to do with backend then uncomment some code and delete some codes as instructed at NavBar.js 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

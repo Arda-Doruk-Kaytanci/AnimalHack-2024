@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, Routes, Link, BrowserRouter } from 'react-router-dom';
 import HomePage from './HomePage';
 import AnimalCatalogue from './AnimalCatalogue';
@@ -93,6 +93,7 @@ import giantIbisImage from "./Images/Giant-Ibis.png"
 import yangtzeSoftshellTurtleImage from "./Images/Yangtze-Softshell-Turtle.png"
 import takaheImage from "./Images/Takahe.png"
 import philippineTarsierImage from "./Images/Philippine-Tarsier.png"
+
 const animalDesc = {
     giantPanda: "The Giant Panda (Ailuropoda melanoleuca) is a beloved and iconic symbol of wildlife conservation, known for its distinctive black and white fur and gentle demeanor; native to the mountainous regions of central China, they live in bamboo forests, feeding almost exclusively on bamboo; skilled climbers and swimmers, pandas face critical threats such as habitat loss due to deforestation, agricultural expansion, and human encroachment, as well as low reproductive rates; conservation efforts, including habitat restoration, captive breeding, and legal protections, have helped stabilize their population, but ongoing efforts are crucial for their survival in the wild.",
     amurLeopard: "The Amur Leopard is a critically endangered leopard subspecies native to the temperate forests of the Russian Far East and northeastern China. It has a pale, golden coat with rosettes and is adapted to cold climates. Its diet includes roe deer, sika deer, and hares. Major threats include habitat loss, poaching, and human-wildlife conflict. Conservation actions involve habitat protection, anti-poaching measures, and cross-border cooperation. The population is estimated to be fewer than 100 individuals.",
@@ -185,9 +186,31 @@ const animalDesc = {
     takahe: "The Takahe (Porphyrio hochstetteri) is a flightless bird native to the grasslands of New Zealand. It feeds on grasses and leaves. Habitat loss and introduced predators are major threats. Conservation actions include breeding programs and predator control efforts. The population is estimated to be around 400 individuals.",
     philippineTarsier: "The Philippine Tarsier (Carlito syrichta) is a small primate found in the rainforests of the Philippines. It feeds on insects and small vertebrates. Habitat destruction and the illegal pet trade are significant threats. Conservation efforts focus on protected areas and breeding programs. The population is estimated to be around 5,000 individuals.",
 };
+//either you can do this but if you want to implement backend first delete everything above this point expect of the imports and uncomment these
+
 
 
 function NavBar() {
+    /*const [data, setData] = useState([])
+    const fetchData = async () => {
+        try {
+            setLoading(true);
+            const response = await fetch(`http://127.0.0.1:8000/api/`);
+
+            if (!response.ok) {
+                throw new Error(`Failed to fetch data`);
+            }
+
+            const responseData = await response.json();
+            setData(responseData.results);
+
+        } catch (err) {
+            setError(err.message);
+            setLoading(false);
+        }
+    };
+    useEffect(fetchData, [])*/
+    //and then change the routes to match the animals
     return (
         <BrowserRouter>
             <>
